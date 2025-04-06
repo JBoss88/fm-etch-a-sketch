@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 2px;
 }
 
 :root {
@@ -10,12 +12,13 @@
 
 body {
   display: grid;
-  grid-template-columns: 10fr 1fr;
+  grid-template-columns: 1fr 1fr;
   padding: 2rem;
   padding-top: 0;
   background-color: #f3f4f6;
   width: 100vw;
   height: 100vh;
+  background-color: #262a2d;
 }
 
 .grid {
@@ -24,27 +27,44 @@ body {
   width: 80rem;
   height: 80rem; /* 16 boxes * 40px */
   margin-top: 0.5rem;
-  outline: 1px solid #efeaea;
+  outline: 1px solid #262a2d;
 }
 
 .btn-wrapper {
-  align-self: center;
-  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .box {
   width: 40rem;
   height: 40rem;
   background-color: #ffffff;
-  outline: 1px solid rgb(0, 0, 0);
+}
+
+.display-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20rem;
+  height: 20rem;
+}
+
+.display-boxes {
+  width: 4rem;
+  height: 4rem;
 }
 
 .new-box {
   display: inline-block;
   background-color: #ffffff;
-  outline: 1px solid rgb(0, 0, 0);
   height: 10rem;
   width: 10rem;
+}
+
+h1 {
+  color: #364fc7;
+  font-size: 7rem;
 }
 
 button {

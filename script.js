@@ -2,6 +2,7 @@
 
 const container = document.getElementById('gridContainer');
 const btn = document.querySelector('button');
+const displayContainer = document.querySelector('.display-container');
 
 for (let i = 0; i < 2 * 2; i++) {
   let box = document.createElement('div');
@@ -38,6 +39,11 @@ const getAlertInput = () => {
     container.append(newBox);
   };
 
+  if (gridSize === 0) return;
+  if (isNaN(gridSize)) {
+    alert("Needs to be a number that's greater than 0");
+  }
+
   if (gridSize <= 100) {
     container.innerHTML = '';
     for (let j = 0; j < gridSize * gridSize; j++) {
@@ -52,3 +58,10 @@ container.addEventListener('mouseover', e => {
   if (!clicked) return;
   clicked.style.backgroundColor = createColor();
 });
+
+for (let k = 0; k < 25; k++) {
+  const displayBoxes = document.createElement('div');
+  displayBoxes.classList.add('display-boxes');
+  displayBoxes.style.backgroundColor = createColor();
+  displayContainer.append(displayBoxes);
+}
